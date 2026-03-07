@@ -246,15 +246,17 @@ Assistance with Apple deployments, troubleshooting, and improving your IT suppor
 
 <h2 style="text-align:center">Request a Free Quote</h2>
 
-<form>
+<form action="https://formspree.io/f/xvzwgazz" method="POST">
 
-<input type="text" placeholder="Your Name" required>
+<input type="text" name="name" placeholder="Your Name" required>
 
-<input type="email" placeholder="Email Address" required>
+<input type="email" name="email" placeholder="Email Address" required>
 
-<input type="text" placeholder="Company Name">
+<input type="text" name="company" placeholder="Company Name">
 
-<textarea placeholder="Tell us about the IT support you need"></textarea>
+<textarea name="message" placeholder="Tell us about the IT support you need"></textarea>
+
+<input type="hidden" name="_subject" value="New Mac Surgeon MSP Lead">
 
 <button type="submit">Submit Request</button>
 
