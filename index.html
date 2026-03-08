@@ -29,13 +29,15 @@ border-bottom:2px solid #c40000;
 .logo{
 display:flex;
 align-items:center;
-gap:10px;
-font-size:20px;
-font-weight:bold;
 }
 
 .logo img{
-height:40px;
+height:65px;
+}
+
+nav{
+display:flex;
+align-items:center;
 }
 
 nav a{
@@ -48,6 +50,34 @@ font-weight:500;
 nav a:hover{
 color:#ff2b2b;
 }
+
+/* HAMBURGER */
+
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+/* MOBILE NAV */
+
+.mobile-nav{
+display:none;
+flex-direction:column;
+background:black;
+position:absolute;
+top:90px;
+right:0;
+width:220px;
+border-left:2px solid #c40000;
+}
+
+.mobile-nav a{
+padding:15px;
+border-bottom:1px solid #222;
+}
+
+/* SECTIONS */
 
 section{
 padding:80px 40px;
@@ -169,6 +199,20 @@ border-top:2px solid #c40000;
 font-size:14px;
 }
 
+/* RESPONSIVE */
+
+@media (max-width: 900px){
+
+nav{
+display:none;
+}
+
+.hamburger{
+display:block;
+}
+
+}
+
 </style>
 </head>
 
@@ -187,6 +231,16 @@ font-size:14px;
 <a href="#remote">Remote Access</a>
 <a href="#quote">Free Quote</a>
 </nav>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<div class="mobile-nav" id="mobileMenu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#remote">Remote Access</a>
+<a href="#quote">Free Quote</a>
+</div>
 
 </header>
 
@@ -296,11 +350,6 @@ Once connected, our technicians can troubleshoot, configure software, and resolv
 
 </div>
 
-<p style="margin-top:40px">
-Our remote support system is designed to be organized, secure, and simple for both individuals and businesses. 
-This allows The Mac Surgeon to provide fast Apple-focused support anywhere in the United States.
-</p>
-
 </section>
 
 <section id="quote">
@@ -332,6 +381,19 @@ Powered by Secure Remote Support Technology | HelpWire
 © 2026 The Mac Surgeon | Apple-Focused IT Support
 
 </footer>
+
+<script>
+
+function toggleMenu(){
+var menu = document.getElementById("mobileMenu");
+if(menu.style.display === "flex"){
+menu.style.display = "none";
+}else{
+menu.style.display = "flex";
+}
+}
+
+</script>
 
 </body>
 </html>
