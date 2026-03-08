@@ -8,16 +8,6 @@
 <style>
 
 body{
-margin:0;<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Mac Surgeon | Outsourced Remote IT Support</title>
-
-<style>
-
-body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
 background:#0b0b0b;
@@ -39,15 +29,13 @@ border-bottom:2px solid #c40000;
 .logo{
 display:flex;
 align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:bold;
 }
 
 .logo img{
-height:65px;
-}
-
-nav{
-display:flex;
-align-items:center;
+height:40px;
 }
 
 nav a{
@@ -60,34 +48,6 @@ font-weight:500;
 nav a:hover{
 color:#ff2b2b;
 }
-
-/* HAMBURGER */
-
-.hamburger{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
-
-/* MOBILE NAV */
-
-.mobile-nav{
-display:none;
-flex-direction:column;
-background:black;
-position:absolute;
-top:90px;
-right:0;
-width:220px;
-border-left:2px solid #c40000;
-}
-
-.mobile-nav a{
-padding:15px;
-border-bottom:1px solid #222;
-}
-
-/* SECTIONS */
 
 section{
 padding:80px 40px;
@@ -209,20 +169,6 @@ border-top:2px solid #c40000;
 font-size:14px;
 }
 
-/* RESPONSIVE */
-
-@media (max-width: 900px){
-
-nav{
-display:none;
-}
-
-.hamburger{
-display:block;
-}
-
-}
-
 </style>
 </head>
 
@@ -241,16 +187,6 @@ display:block;
 <a href="#remote">Remote Access</a>
 <a href="#quote">Free Quote</a>
 </nav>
-
-<div class="hamburger" onclick="toggleMenu()">☰</div>
-
-<div class="mobile-nav" id="mobileMenu">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#remote">Remote Access</a>
-<a href="#quote">Free Quote</a>
-</div>
 
 </header>
 
@@ -360,393 +296,10 @@ Once connected, our technicians can troubleshoot, configure software, and resolv
 
 </div>
 
-</section>
-
-<section id="quote">
-
-<h2 style="text-align:center">Request a Free Quote</h2>
-
-<form action="https://formspree.io/f/xvzwgazz" method="POST">
-
-<input type="text" name="name" placeholder="Your Name" required>
-
-<input type="email" name="email" placeholder="Email Address" required>
-
-<input type="text" name="company" placeholder="Company Name">
-
-<textarea name="message" placeholder="Tell us about the IT support you need"></textarea>
-
-<input type="hidden" name="_subject" value="New Mac Surgeon MSP Lead">
-
-<button type="submit">Submit Request</button>
-
-</form>
-
-</section>
-
-<footer>
-
-Powered by Secure Remote Support Technology | HelpWire  
-<br><br>
-© 2026 The Mac Surgeon | Apple-Focused IT Support
-
-</footer>
-
-<script>
-
-function toggleMenu(){
-var menu = document.getElementById("mobileMenu");
-if(menu.style.display === "flex"){
-menu.style.display = "none";
-}else{
-menu.style.display = "flex";
-}
-}
-
-</script>
-
-</body>
-</html>
-font-family:Arial, Helvetica, sans-serif;
-background:#0b0b0b;
-color:white;
-}
-
-header{
-background:black;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:15px 40px;
-position:sticky;
-top:0;
-z-index:1000;
-border-bottom:2px solid #c40000;
-}
-
-.logo{
-display:flex;
-align-items:center;
-}
-
-.logo img{
-height:95px;
-}
-
-nav{
-display:flex;
-align-items:center;
-}
-
-nav a{
-color:white;
-margin-left:25px;
-text-decoration:none;
-font-weight:500;
-}
-
-nav a:hover{
-color:#ff2b2b;
-}
-
-/* HAMBURGER */
-
-.hamburger{
-display:none;
-font-size:28px;
-cursor:pointer;
-}
-
-/* MOBILE NAV */
-
-.mobile-nav{
-display:none;
-flex-direction:column;
-background:black;
-position:absolute;
-top:90px;
-right:0;
-width:220px;
-border-left:2px solid #c40000;
-}
-
-.mobile-nav a{
-padding:15px;
-border-bottom:1px solid #222;
-}
-
-/* SECTIONS */
-
-section{
-padding:80px 40px;
-max-width:1000px;
-margin:auto;
-}
-
-.hero{
-text-align:center;
-padding-top:120px;
-padding-bottom:120px;
-}
-
-.hero h1{
-font-size:48px;
-color:#ff2b2b;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:20px;
-max-width:700px;
-margin:auto;
-}
-
-.button{
-display:inline-block;
-margin-top:30px;
-padding:14px 28px;
-background:#c40000;
-color:white;
-text-decoration:none;
-border-radius:4px;
-font-weight:bold;
-}
-
-.button:hover{
-background:#ff2b2b;
-}
-
-.services{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.service-card{
-background:#161616;
-padding:25px;
-border-left:4px solid #c40000;
-border-radius:4px;
-}
-
-.service-card h3{
-margin-top:0;
-color:#ff2b2b;
-}
-
-form{
-display:flex;
-flex-direction:column;
-gap:15px;
-max-width:500px;
-margin:auto;
-}
-
-input, textarea{
-padding:12px;
-border:none;
-border-radius:3px;
-font-size:16px;
-}
-
-textarea{
-height:120px;
-}
-
-button{
-padding:14px;
-background:#c40000;
-color:white;
-border:none;
-font-size:16px;
-font-weight:bold;
-cursor:pointer;
-border-radius:3px;
-}
-
-button:hover{
-background:#ff2b2b;
-}
-
-.remote-steps{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.step{
-background:#161616;
-padding:25px;
-border-left:4px solid #c40000;
-border-radius:4px;
-}
-
-.step h3{
-color:#ff2b2b;
-margin-top:0;
-}
-
-footer{
-background:black;
-text-align:center;
-padding:25px;
-margin-top:80px;
-border-top:2px solid #c40000;
-font-size:14px;
-}
-
-/* RESPONSIVE */
-
-@media (max-width: 900px){
-
-nav{
-display:none;
-}
-
-.hamburger{
-display:block;
-}
-
-}
-
-</style>
-</head>
-
-<body>
-
-<header>
-
-<div class="logo">
-<img src="macsurgeonpic1.jpg" alt="The Mac Surgeon Logo">
-</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#remote">Remote Access</a>
-<a href="#quote">Free Quote</a>
-</nav>
-
-<div class="hamburger" onclick="toggleMenu()">☰</div>
-
-<div class="mobile-nav" id="mobileMenu">
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#remote">Remote Access</a>
-<a href="#quote">Free Quote</a>
-</div>
-
-</header>
-
-<section id="home" class="hero">
-
-<h1>Outsourced IT Support</h1>
-
-<p>
-The Mac Surgeon provides reliable Remote Help Desk services for individuals and companies that need additional
-IT support, overflow ticket handling, or Apple device expertise without hiring full-time staff.
+<p style="margin-top:40px">
+Our remote support system is designed to be organized, secure, and simple for both individuals and businesses. 
+This allows The Mac Surgeon to provide fast Apple-focused support anywhere in the United States.
 </p>
-
-<a class="button" href="#quote">Request Free Quote</a>
-
-</section>
-
-<section id="about">
-
-<h2>About The Mac Surgeon</h2>
-
-<p>
-The Mac Surgeon is a remote IT support provider specializing in Apple environments including macOS,
-iOS, and Apple device management. We work remotely with individuals and businesses that need dependable help desk coverage,
-overflow ticket support, or Apple expertise to assist their internal IT teams or small business.
-</p>
-
-<p>
-Whether your company needs occasional support or consistent ticket coverage,
-our flexible service model allows organizations to scale their IT support
-without adding permanent staff.
-</p>
-
-</section>
-
-<section id="services">
-
-<h2>Services</h2>
-
-<div class="services">
-
-<div class="service-card">
-<h3>Outsourced Help Desk</h3>
-<p>
-Remote IT support for employees experiencing technical issues with Apple
-devices, software, or workplace systems.
-</p>
-</div>
-
-<div class="service-card">
-<h3>Overflow Ticket Handling</h3>
-<p>
-When internal IT teams get overwhelmed, we step in to resolve help desk
-tickets and maintain productivity.
-</p>
-</div>
-
-<div class="service-card">
-<h3>Apple Device Support</h3>
-<p>
-Expert support for macOS, iOS, iPadOS, Apple hardware, and Apple business environments.
-</p>
-</div>
-
-<div class="service-card">
-<h3>Remote IT Consulting</h3>
-<p>
-Assistance with Apple deployments, troubleshooting, and improving your IT support workflow.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="remote">
-
-<h2>Remote Support Made Simple</h2>
-
-<p>
-The Mac Surgeon uses a secure remote support platform powered by HelpWire to assist clients quickly and safely.
-Our remote access system guides users step-by-step through the connection process, making it easy for individuals
-and businesses to receive expert Apple support without complicated setup.
-</p>
-
-<div class="remote-steps">
-
-<div class="step">
-<h3>1. Receive Your Secure Link</h3>
-<p>
-When your support session begins, we send you a secure HelpWire connection link that allows us to start a remote support session.
-</p>
-</div>
-
-<div class="step">
-<h3>2. Follow the Guided Steps</h3>
-<p>
-HelpWire walks you through each permission required for screen sharing and remote assistance. Everything is clearly explained and easy to approve.
-</p>
-</div>
-
-<div class="step">
-<h3>3. Get Immediate Support</h3>
-<p>
-Once connected, our technicians can troubleshoot, configure software, and resolve issues in real time while you watch the process.
-</p>
-</div>
-
-</div>
 
 </section>
 
@@ -779,19 +332,6 @@ Powered by Secure Remote Support Technology | HelpWire
 © 2026 The Mac Surgeon | Apple-Focused IT Support
 
 </footer>
-
-<script>
-
-function toggleMenu(){
-var menu = document.getElementById("mobileMenu");
-if(menu.style.display === "flex"){
-menu.style.display = "none";
-}else{
-menu.style.display = "flex";
-}
-}
-
-</script>
 
 </body>
 </html>
