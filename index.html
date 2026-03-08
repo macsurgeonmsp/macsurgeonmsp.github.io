@@ -141,6 +141,25 @@ button:hover{
 background:#ff2b2b;
 }
 
+.remote-steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.step{
+background:#161616;
+padding:25px;
+border-left:4px solid #c40000;
+border-radius:4px;
+}
+
+.step h3{
+color:#ff2b2b;
+margin-top:0;
+}
+
 footer{
 background:black;
 text-align:center;
@@ -159,13 +178,13 @@ font-size:14px;
 
 <div class="logo">
 <img src="macsurgeonpic1.jpg" alt="The Mac Surgeon Logo">
-<span></span>
 </div>
 
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
+<a href="#remote">Remote Access</a>
 <a href="#quote">Free Quote</a>
 </nav>
 
@@ -178,7 +197,6 @@ font-size:14px;
 <p>
 The Mac Surgeon provides reliable Remote Help Desk services for individuals and companies that need additional
 IT support, overflow ticket handling, or Apple device expertise without hiring full-time staff.
-  
 </p>
 
 <a class="button" href="#quote">Request Free Quote</a>
@@ -192,7 +210,7 @@ IT support, overflow ticket handling, or Apple device expertise without hiring f
 <p>
 The Mac Surgeon is a remote IT support provider specializing in Apple environments including macOS,
 iOS, and Apple device management. We work remotely with individuals and businesses that need dependable help desk coverage,
-overflow ticket support, or Apple expertise to assist their internal IT teams or small business. 
+overflow ticket support, or Apple expertise to assist their internal IT teams or small business.
 </p>
 
 <p>
@@ -243,6 +261,48 @@ Assistance with Apple deployments, troubleshooting, and improving your IT suppor
 
 </section>
 
+<section id="remote">
+
+<h2>Remote Support Made Simple</h2>
+
+<p>
+The Mac Surgeon uses a secure remote support platform powered by HelpWire to assist clients quickly and safely.
+Our remote access system guides users step-by-step through the connection process, making it easy for individuals
+and businesses to receive expert Apple support without complicated setup.
+</p>
+
+<div class="remote-steps">
+
+<div class="step">
+<h3>1. Receive Your Secure Link</h3>
+<p>
+When your support session begins, we send you a secure HelpWire connection link that allows us to start a remote support session.
+</p>
+</div>
+
+<div class="step">
+<h3>2. Follow the Guided Steps</h3>
+<p>
+HelpWire walks you through each permission required for screen sharing and remote assistance. Everything is clearly explained and easy to approve.
+</p>
+</div>
+
+<div class="step">
+<h3>3. Get Immediate Support</h3>
+<p>
+Once connected, our technicians can troubleshoot, configure software, and resolve issues in real time while you watch the process.
+</p>
+</div>
+
+</div>
+
+<p style="margin-top:40px">
+Our remote support system is designed to be organized, secure, and simple for both individuals and businesses. 
+This allows The Mac Surgeon to provide fast Apple-focused support anywhere in the United States.
+</p>
+
+</section>
+
 <section id="quote">
 
 <h2 style="text-align:center">Request a Free Quote</h2>
@@ -267,6 +327,8 @@ Assistance with Apple deployments, troubleshooting, and improving your IT suppor
 
 <footer>
 
+Powered by Secure Remote Support Technology | HelpWire  
+<br><br>
 © 2026 The Mac Surgeon | Apple-Focused IT Support
 
 </footer>
