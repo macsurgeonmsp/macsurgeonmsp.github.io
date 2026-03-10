@@ -131,54 +131,6 @@ margin-top:0;
 color:#ff2b2b;
 }
 
-.packages{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:30px;
-margin-top:40px;
-}
-
-.package-card{
-background:#161616;
-padding:30px;
-border-left:4px solid #c40000;
-border-radius:4px;
-text-align:center;
-}
-
-.package-card h3{
-color:#ff2b2b;
-margin-top:0;
-}
-
-.package-price{
-font-size:32px;
-font-weight:bold;
-margin:15px 0;
-}
-
-.package-card ul{
-list-style:none;
-padding:0;
-}
-
-.package-card ul li{
-padding:8px 0;
-border-bottom:1px solid #222;
-}
-
-.newsletter{
-text-align:center;
-background:#111;
-border-top:2px solid #c40000;
-border-bottom:2px solid #c40000;
-}
-
-.newsletter form{
-max-width:400px;
-margin:auto;
-}
-
 form{
 display:flex;
 flex-direction:column;
@@ -230,6 +182,63 @@ border-radius:4px;
 .step h3{
 color:#ff2b2b;
 margin-top:0;
+}
+
+/* Packages Section Styles */
+.packages{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+margin-top:60px;
+}
+
+.package-card{
+background:#161616;
+padding:35px;
+border-top:4px solid #c40000;
+border-radius:6px;
+box-shadow:0 0 15px rgba(0,0,0,0.4);
+display:flex;
+flex-direction:column;
+transition:transform .25s ease;
+}
+
+.package-card:hover{
+transform:translateY(-6px);
+}
+
+.package-card h2{
+color:#ff2b2b;
+margin-top:0;
+}
+
+.package-desc{
+margin-bottom:20px;
+color:#ccc;
+}
+
+.features{
+margin:20px 0;
+padding:0;
+list-style:none;
+}
+
+.features li{
+margin-bottom:10px;
+padding-left:22px;
+position:relative;
+}
+
+.features li:before{
+content:"✔";
+position:absolute;
+left:0;
+color:#ff2b2b;
+}
+
+.notincluded{
+opacity:.45;
+text-decoration:line-through;
 }
 
 footer{
@@ -288,7 +297,6 @@ display:block;
 
 </header>
 
-<!-- HERO -->
 <section id="home" class="hero">
 
 <h1>Outsourced IT Support</h1>
@@ -302,7 +310,6 @@ IT support, overflow ticket handling, or Apple device expertise without hiring f
 
 </section>
 
-<!-- ABOUT -->
 <section id="about">
 
 <h2>About The Mac Surgeon</h2>
@@ -321,7 +328,6 @@ without adding permanent staff.
 
 </section>
 
-<!-- SERVICES -->
 <section id="services">
 
 <h2>Services</h2>
@@ -362,7 +368,6 @@ Assistance with Apple deployments, troubleshooting, and improving your IT suppor
 
 </section>
 
-<!-- REMOTE SUPPORT -->
 <section id="remote">
 
 <h2>Remote Support Made Simple</h2>
@@ -394,7 +399,6 @@ Once connected our technicians troubleshoot issues in real time while you watch.
 
 </section>
 
-<!-- AI AGENTS -->
 <section id="aiagents">
 
 <h2>AI Agents</h2>
@@ -474,51 +478,113 @@ balance of automation and human expertise.
 
 </section>
 
-<!-- PACKAGES -->
+<!-- PACKAGES SECTION START -->
 <section id="packages">
 
-<h2>Support Packages</h2>
+<h2 style="text-align:center">IT Support Packages</h2>
+
+<p style="max-width:900px;margin:auto;text-align:center;padding-bottom:40px;">
+Flexible support packages designed for MSPs and growing companies that need additional IT capacity.
+Our services combine intelligent AI automation with experienced technicians to deliver reliable
+help desk coverage without the cost of hiring additional internal staff.
+</p>
 
 <div class="packages">
 
-<div class="package-card">
-<h3>Starter Support</h3>
-<div class="package-price">$299 / month</div>
-<ul>
-<li>Remote Apple Support</li>
-<li>Email Support</li>
-<li>Small Business Coverage</li>
-</ul>
-<a class="button" href="#quote">Get Started</a>
-</div>
+<!-- PACKAGE 1 -->
 
 <div class="package-card">
-<h3>Business Support</h3>
-<div class="package-price">$799 / month</div>
-<ul>
-<li>Help Desk Coverage</li>
-<li>Overflow Ticket Handling</li>
-<li>Remote Troubleshooting</li>
+
+<h2>AI Help Desk Automation</h2>
+
+<p class="package-desc">
+A fully managed AI-powered help desk system designed to resolve routine Tier 1 tickets automatically.
+Our custom AI agents learn your environment, ticket history, documentation, and workflows —
+allowing them to generate accurate responses and resolve many common issues without human intervention.
+</p>
+
+<ul class="features">
+
+<li>Custom AI agents trained on your environment</li>
+<li>AI learns from knowledge base & ticket history</li>
+<li>AI-generated Tier 1 ticket responses</li>
+<li>50–80% ticket automation after training period</li>
+<li>Confidence scoring & intelligent escalation</li>
+<li>Human technician approval layer</li>
+
+<li class="notincluded">Remote troubleshooting sessions</li>
+<li class="notincluded">Live screen sharing support</li>
+
 </ul>
-<a class="button" href="#quote">Get Started</a>
+
+<a class="button" href="https://calendly.com/macsurgeon-msp/30min" target="_blank">Schedule a Call Today</a>
+
 </div>
 
+<!-- PACKAGE 2 -->
+
 <div class="package-card">
-<h3>Enterprise Support</h3>
-<div class="package-price">Custom</div>
-<ul>
-<li>Dedicated AI Agents</li>
-<li>After Hours Support</li>
-<li>Tier 1 + Tier 2 Support</li>
+
+<h2>Dedicated Apple Specialists</h2>
+
+<p class="package-desc">
+Designed for organizations that rely on Apple devices and need experienced technicians available
+for real-time troubleshooting. Our Apple specialists provide professional screen-sharing sessions
+to diagnose and resolve macOS issues quickly.
+</p>
+
+<ul class="features">
+
+<li>Dedicated macOS troubleshooting specialists</li>
+<li>Live remote screen sharing support</li>
+<li>Direct technician sessions with employees</li>
+<li>Support for macOS, iOS, and Apple hardware</li>
+<li>Scheduled weekly support session allotments</li>
+<li>Ideal for Mac-heavy organizations</li>
+
+<li class="notincluded">AI ticket automation</li>
+<li class="notincluded">Automated help desk responses</li>
+
 </ul>
-<a class="button" href="#quote">Contact Us</a>
+
+<a class="button" href="https://calendly.com/macsurgeon-msp/30min" target="_blank">Schedule a Call Today</a>
+
+</div>
+
+<!-- PACKAGE 3 -->
+
+<div class="package-card">
+
+<h2>After Hours & Overflow Coverage</h2>
+
+<p class="package-desc">
+Extend your help desk coverage beyond normal business hours. Our hybrid system of AI agents and
+human technicians manages ticket overflow and after-hours requests to ensure your users always
+receive timely support.
+</p>
+
+<ul class="features">
+
+<li>After-hours help desk coverage</li>
+<li>Overflow ticket handling for busy teams</li>
+<li>AI-assisted Tier 1 ticket analysis</li>
+<li>Human technician escalation when required</li>
+<li>Integration with existing help desk systems</li>
+<li>Evening and weekend coverage options</li>
+
+<li class="notincluded">Dedicated remote troubleshooting sessions</li>
+
+</ul>
+
+<a class="button" href="https://calendly.com/macsurgeon-msp/30min" target="_blank">Schedule a Call Today</a>
+
 </div>
 
 </div>
 
 </section>
+<!-- PACKAGES SECTION END -->
 
-<!-- QUOTE -->
 <section id="quote">
 
 <h2 style="text-align:center">Request a Free Quote</h2>
@@ -526,7 +592,9 @@ balance of automation and human expertise.
 <form action="https://formspree.io/f/xvzwgazz" method="POST">
 
 <input type="text" name="name" placeholder="Your Name" required>
+
 <input type="email" name="email" placeholder="Email Address" required>
+
 <input type="text" name="company" placeholder="Company Name">
 
 <textarea name="message" placeholder="Tell us about the IT support you need. Please specify if you require remote IT support or overflow ticket handling. "></textarea>
@@ -534,25 +602,6 @@ balance of automation and human expertise.
 <input type="hidden" name="_subject" value="New Mac Surgeon MSP Lead">
 
 <button type="submit">Submit Request</button>
-
-</form>
-
-</section>
-
-<!-- NEWSLETTER -->
-<section class="newsletter">
-
-<h2>Join Our Newsletter</h2>
-
-<p>
-Receive technology tips, Apple support insights, and updates about Mac Surgeon AI services.
-</p>
-
-<form action="https://formspree.io/f/xvzwgazz" method="POST">
-
-<input type="email" name="email" placeholder="Enter your email address" required>
-
-<button type="submit">Subscribe</button>
 
 </form>
 
