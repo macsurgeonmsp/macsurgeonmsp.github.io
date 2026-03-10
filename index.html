@@ -184,7 +184,6 @@ color:#ff2b2b;
 margin-top:0;
 }
 
-/* Packages Section Styles */
 .packages{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -263,6 +262,27 @@ display:block;
 }
 
 </style>
+<!-- Brevo Newsletter Styles -->
+<style>
+  @font-face {
+    font-display: block;
+    font-family: Roboto;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+  }
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+  }
+</style>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
 </head>
 
 <body>
@@ -280,6 +300,7 @@ display:block;
 <a href="#remote">Remote Access</a>
 <a href="#aiagents">AI Agents</a>
 <a href="#packages">Packages</a>
+<a href="#newsletter">Newsletter</a>
 <a href="#quote">Free Quote</a>
 </nav>
 
@@ -292,6 +313,7 @@ display:block;
 <a href="#remote">Remote Access</a>
 <a href="#aiagents">AI Agents</a>
 <a href="#packages">Packages</a>
+<a href="#newsletter">Newsletter</a>
 <a href="#quote">Free Quote</a>
 </div>
 
@@ -478,12 +500,11 @@ balance of automation and human expertise.
 
 </section>
 
-<!-- PACKAGES SECTION START -->
 <section id="packages">
 
-<h2 style="text-align:center">IT Support Packages</h2>
+<h2>IT Support Packages</h2>
 
-<p style="max-width:900px;margin:auto;text-align:center;padding-bottom:40px;">
+<p style="text-align:center; max-width:900px; margin:auto; padding-bottom:30px;">
 Flexible support packages designed for MSPs and growing companies that need additional IT capacity.
 Our services combine intelligent AI automation with experienced technicians to deliver reliable
 help desk coverage without the cost of hiring additional internal staff.
@@ -491,142 +512,92 @@ help desk coverage without the cost of hiring additional internal staff.
 
 <div class="packages">
 
-<!-- PACKAGE 1 -->
-
 <div class="package-card">
-
 <h2>AI Help Desk Automation</h2>
-
 <p class="package-desc">
 A fully managed AI-powered help desk system designed to resolve routine Tier 1 tickets automatically.
 Our custom AI agents learn your environment, ticket history, documentation, and workflows —
 allowing them to generate accurate responses and resolve many common issues without human intervention.
 </p>
-
 <ul class="features">
-
 <li>Custom AI agents trained on your environment</li>
 <li>AI learns from knowledge base & ticket history</li>
 <li>AI-generated Tier 1 ticket responses</li>
 <li>50–80% ticket automation after training period</li>
 <li>Confidence scoring & intelligent escalation</li>
 <li>Human technician approval layer</li>
-
 <li class="notincluded">Remote troubleshooting sessions</li>
 <li class="notincluded">Live screen sharing support</li>
-
 </ul>
-
 <a class="button" href="https://calendly.com/macsurgeon-msp/30min" target="_blank">Schedule a Call Today</a>
-
 </div>
 
-<!-- PACKAGE 2 -->
-
 <div class="package-card">
-
 <h2>Dedicated Apple Specialists</h2>
-
 <p class="package-desc">
 Designed for organizations that rely on Apple devices and need experienced technicians available
 for real-time troubleshooting. Our Apple specialists provide professional screen-sharing sessions
 to diagnose and resolve macOS issues quickly.
 </p>
-
 <ul class="features">
-
 <li>Dedicated macOS troubleshooting specialists</li>
 <li>Live remote screen sharing support</li>
 <li>Direct technician sessions with employees</li>
 <li>Support for macOS, iOS, and Apple hardware</li>
 <li>Scheduled weekly support session allotments</li>
 <li>Ideal for Mac-heavy organizations</li>
-
 <li class="notincluded">AI ticket automation</li>
 <li class="notincluded">Automated help desk responses</li>
-
 </ul>
-
 <a class="button" href="https://calendly.com/macsurgeon-msp/30min" target="_blank">Schedule a Call Today</a>
-
 </div>
 
-<!-- PACKAGE 3 -->
-
 <div class="package-card">
-
 <h2>After Hours & Overflow Coverage</h2>
-
 <p class="package-desc">
 Extend your help desk coverage beyond normal business hours. Our hybrid system of AI agents and
 human technicians manages ticket overflow and after-hours requests to ensure your users always
 receive timely support.
 </p>
-
 <ul class="features">
-
 <li>After-hours help desk coverage</li>
 <li>Overflow ticket handling for busy teams</li>
 <li>AI-assisted Tier 1 ticket analysis</li>
 <li>Human technician escalation when required</li>
 <li>Integration with existing help desk systems</li>
 <li>Evening and weekend coverage options</li>
-
 <li class="notincluded">Dedicated remote troubleshooting sessions</li>
-
 </ul>
-
 <a class="button" href="https://calendly.com/macsurgeon-msp/30min" target="_blank">Schedule a Call Today</a>
-
 </div>
 
 </div>
 
 </section>
-<!-- PACKAGES SECTION END -->
 
 <section id="quote">
 
 <h2 style="text-align:center">Request a Free Quote</h2>
 
 <form action="https://formspree.io/f/xvzwgazz" method="POST">
-
 <input type="text" name="name" placeholder="Your Name" required>
-
 <input type="email" name="email" placeholder="Email Address" required>
-
 <input type="text" name="company" placeholder="Company Name">
-
 <textarea name="message" placeholder="Tell us about the IT support you need. Please specify if you require remote IT support or overflow ticket handling. "></textarea>
-
 <input type="hidden" name="_subject" value="New Mac Surgeon MSP Lead">
-
 <button type="submit">Submit Request</button>
-
 </form>
 
 </section>
 
-<footer>
+<!-- Newsletter Section -->
+<section id="newsletter">
 
-Powered by The Mac Surgeon AI Technology 
-<br><br>
-© 2026 The Mac Surgeon | Apple-Focused IT Support
-
-</footer>
-
-<script>
-
-function toggleMenu(){
-var menu = document.getElementById("mobileMenu");
-if(menu.style.display === "flex"){
-menu.style.display = "none";
-}else{
-menu.style.display = "flex";
-}
-}
-
-</script>
-
-</body>
-</html>
+<!-- Begin Brevo Form -->
+<div class="sib-form" style="text-align: center; background-color: #0f1010;">
+  <div id="sib-form-container" class="sib-form-container">
+    <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(242,222,222,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid;">
+      <form id="sib-form" method="POST" action="https://3e7948f5.sibforms.com/serve/MUIFAELMXDm0mHjHY3ZznqCxdOhO_en-z1HyyGvwCZp5dE9urkULJ5r3EaPhvSJoUNi2KxApP9CDEMDZrfNCOzyO74txUb0yn5DCPzJ4AbQ1XZfFQ_BhVhQqZsU2Cz6Kn13sMZkEWimgYS4qjK-Nbr70OQ_Jn_S5bHqIKRLK6Frn0QTWufNmT_mUe3mLlxDFUBzRQFWtgg77Vq9n9A==" data-type="subscription">
+        <div style="padding: 8px 0;">
+          <p style="font-size:32px; font-weight:700; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858;">The Mac Surgeon MSP</p>
+          <
