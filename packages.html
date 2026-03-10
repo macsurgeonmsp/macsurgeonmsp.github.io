@@ -41,6 +41,10 @@ nav a:hover{
 color:#ff2b2b;
 }
 
+.active{
+color:#ff2b2b;
+}
+
 section{
 padding:80px 40px;
 max-width:1200px;
@@ -50,7 +54,7 @@ margin:auto;
 .hero{
 text-align:center;
 padding-top:60px;
-padding-bottom:60px;
+padding-bottom:40px;
 }
 
 .hero h1{
@@ -80,6 +84,11 @@ border-radius:6px;
 box-shadow:0 0 15px rgba(0,0,0,0.4);
 display:flex;
 flex-direction:column;
+transition:transform .25s ease;
+}
+
+.package-card:hover{
+transform:translateY(-6px);
 }
 
 .package-card h2{
@@ -126,6 +135,7 @@ text-decoration:none;
 font-weight:bold;
 border-radius:4px;
 text-align:center;
+transition:background .2s ease;
 }
 
 .button:hover{
@@ -149,14 +159,14 @@ font-size:14px;
 <header>
 
 <div class="logo">
-<img src="macsurgeonpic1.jpg">
+<img src="macsurgeonpic1.jpg" alt="Mac Surgeon Logo">
 </div>
 
 <nav>
 <a href="index.html">Home</a>
 <a href="index.html#services">Services</a>
 <a href="index.html#aiagents">AI Agents</a>
-<a href="packages.html">Packages</a>
+<a class="active" href="packages.html">Packages</a>
 <a href="index.html#quote">Contact</a>
 </nav>
 
@@ -167,9 +177,9 @@ font-size:14px;
 <h1>IT Support Packages</h1>
 
 <p>
-Flexible support packages designed for MSPs and companies that need additional IT capacity.
-Our services combine AI technology and experienced technicians to deliver reliable help desk
-coverage without requiring you to hire additional full-time staff.
+Flexible support packages designed for MSPs and growing companies that need additional IT capacity.
+Our services combine intelligent AI automation with experienced technicians to deliver reliable
+help desk coverage without the cost of hiring additional internal staff.
 </p>
 
 </section>
@@ -186,26 +196,26 @@ coverage without requiring you to hire additional full-time staff.
 <h2>AI Help Desk Automation</h2>
 
 <p class="package-desc">
-A fully managed AI-powered help desk system designed to handle routine Tier 1 support requests
-for your organization. Our custom-built AI agents learn your environment and begin resolving
-common tickets automatically while escalating complex issues when needed.
+A fully managed AI-powered help desk system designed to resolve routine Tier 1 tickets automatically.
+Our custom AI agents learn your environment, ticket history, documentation, and workflows —
+allowing them to generate accurate responses and resolve many common issues without human intervention.
 </p>
 
 <ul class="features">
 
 <li>Custom AI agents trained on your environment</li>
-<li>Knowledge base and ticket history learning</li>
-<li>AI-assisted Tier 1 ticket responses</li>
-<li>50–80% Tier 1 automation after training</li>
-<li>Confidence scoring and intelligent escalation</li>
-<li>Human technician approval system</li>
+<li>AI learns from knowledge base & ticket history</li>
+<li>AI-generated Tier 1 ticket responses</li>
+<li>50–80% ticket automation after training period</li>
+<li>Confidence scoring & intelligent escalation</li>
+<li>Human technician approval layer</li>
 
-<li class="notincluded">Remote screen sharing support</li>
-<li class="notincluded">Phone troubleshooting sessions</li>
+<li class="notincluded">Remote troubleshooting sessions</li>
+<li class="notincluded">Live screen sharing support</li>
 
 </ul>
 
-<a class="button" href="tel:+1‪6263448569‬">Schedule a Call Today</a>
+<a class="button" href="YOUR-CALENDLY-LINK" target="_blank">Schedule a Call Today</a>
 
 </div>
 
@@ -217,9 +227,9 @@ common tickets automatically while escalating complex issues when needed.
 <h2>Dedicated Apple Specialists</h2>
 
 <p class="package-desc">
-Ideal for organizations that rely heavily on macOS devices and need experienced Apple support
-technicians available for remote troubleshooting. Our specialists provide live screen-sharing
-sessions to resolve technical issues quickly and professionally.
+Designed for organizations that rely on Apple devices and need experienced technicians available
+for real-time troubleshooting. Our Apple specialists provide professional screen-sharing sessions
+to diagnose and resolve macOS issues quickly.
 </p>
 
 <ul class="features">
@@ -227,16 +237,16 @@ sessions to resolve technical issues quickly and professionally.
 <li>Dedicated macOS troubleshooting specialists</li>
 <li>Live remote screen sharing support</li>
 <li>Direct technician sessions with employees</li>
-<li>Apple device troubleshooting and diagnostics</li>
 <li>Support for macOS, iOS, and Apple hardware</li>
-<li>Flexible weekly remote session allotments</li>
+<li>Scheduled weekly support session allotments</li>
+<li>Ideal for Mac-heavy organizations</li>
 
 <li class="notincluded">AI ticket automation</li>
-<li class="notincluded">Help desk ticket queue management</li>
+<li class="notincluded">Automated help desk responses</li>
 
 </ul>
 
-<a class="button" href="tel:+1‪6263448569‬">Schedule a Call Today</a>
+<a class="button" href="YOUR-CALENDLY-LINK" target="_blank">Schedule a Call Today</a>
 
 </div>
 
@@ -245,28 +255,28 @@ sessions to resolve technical issues quickly and professionally.
 
 <div class="package-card">
 
-<h2>After Hours & Overflow Support</h2>
+<h2>After Hours & Overflow Coverage</h2>
 
 <p class="package-desc">
-Extend your help desk coverage without hiring additional staff. This package provides
-after-hours support and overflow ticket handling using our hybrid system of AI agents
-and live technicians to keep your ticket queues under control.
+Extend your help desk coverage beyond normal business hours. Our hybrid system of AI agents and
+human technicians manages ticket overflow and after-hours requests to ensure your users always
+receive timely support.
 </p>
 
 <ul class="features">
 
 <li>After-hours help desk coverage</li>
 <li>Overflow ticket handling for busy teams</li>
-<li>AI-powered Tier 1 ticket analysis</li>
+<li>AI-assisted Tier 1 ticket analysis</li>
 <li>Human technician escalation when required</li>
 <li>Integration with existing help desk systems</li>
-<li>Coverage during nights and weekends</li>
+<li>Evening and weekend coverage options</li>
 
 <li class="notincluded">Dedicated remote troubleshooting sessions</li>
 
 </ul>
 
-<a class="button" href="tel:+1‪6263448569‬">Schedule a Call Today</a>
+<a class="button" href="YOUR-CALENDLY-LINK" target="_blank">Schedule a Call Today</a>
 
 </div>
 
