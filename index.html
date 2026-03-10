@@ -25,8 +25,18 @@ z-index:1000;
 border-bottom:2px solid #c40000;
 }
 
+.logo{
+display:flex;
+align-items:center;
+}
+
 .logo img{
 height:105px;
+}
+
+nav{
+display:flex;
+align-items:center;
 }
 
 nav a{
@@ -40,32 +50,137 @@ nav a:hover{
 color:#ff2b2b;
 }
 
-.active{
-color:#ff2b2b;
+.hamburger{
+display:none;
+font-size:28px;
+cursor:pointer;
+}
+
+.mobile-nav{
+display:none;
+flex-direction:column;
+background:black;
+position:absolute;
+top:90px;
+right:0;
+width:220px;
+border-left:2px solid #c40000;
+}
+
+.mobile-nav a{
+padding:15px;
+border-bottom:1px solid #222;
 }
 
 section{
 padding:80px 40px;
-max-width:1200px;
+max-width:1000px;
 margin:auto;
 }
 
 .hero{
 text-align:center;
-padding-top:60px;
-padding-bottom:40px;
+padding-top:80px;
+padding-bottom:120px;
 }
 
 .hero h1{
-font-size:46px;
+font-size:48px;
 color:#ff2b2b;
-margin-bottom:15px;
+margin-bottom:20px;
 }
 
 .hero p{
 font-size:20px;
-max-width:800px;
+max-width:700px;
 margin:auto;
+}
+
+.button{
+display:inline-block;
+margin-top:30px;
+padding:14px 28px;
+background:#c40000;
+color:white;
+text-decoration:none;
+border-radius:4px;
+font-weight:bold;
+}
+
+.button:hover{
+background:#ff2b2b;
+}
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:40px;
+}
+
+.service-card{
+background:#161616;
+padding:25px;
+border-left:4px solid #c40000;
+border-radius:4px;
+}
+
+.service-card h3{
+margin-top:0;
+color:#ff2b2b;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:500px;
+margin:auto;
+}
+
+input, textarea{
+padding:12px;
+border:none;
+border-radius:3px;
+font-size:16px;
+}
+
+textarea{
+height:120px;
+}
+
+button{
+padding:14px;
+background:#c40000;
+color:white;
+border:none;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+border-radius:3px;
+}
+
+button:hover{
+background:#ff2b2b;
+}
+
+.remote-steps{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.step{
+background:#161616;
+padding:25px;
+border-left:4px solid #c40000;
+border-radius:4px;
+}
+
+.step h3{
+color:#ff2b2b;
+margin-top:0;
 }
 
 .packages{
@@ -124,21 +239,11 @@ opacity:.45;
 text-decoration:line-through;
 }
 
-.button{
-display:inline-block;
-margin-top:auto;
-padding:14px 24px;
-background:#c40000;
-color:white;
-text-decoration:none;
-font-weight:bold;
-border-radius:4px;
+.newsletter-section{
+padding:60px 20px;
+background:#161616;
+border-top:4px solid #c40000;
 text-align:center;
-transition:background .2s ease;
-}
-
-.button:hover{
-background:#ff2b2b;
 }
 
 footer{
@@ -150,60 +255,203 @@ border-top:2px solid #c40000;
 font-size:14px;
 }
 
-/* Brevo Newsletter Styles */
-@font-face {
+@media (max-width: 900px){
+nav{
+display:none;
+}
+.hamburger{
+display:block;
+}
+}
+</style>
+
+<!-- Begin Brevo Newsletter Fonts -->
+<style>
+  @font-face {
     font-display: block;
     font-family: Roboto;
     src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff");
-}
-
-@font-face {
+  }
+  @font-face {
     font-display: fallback;
     font-family: Roboto;
     font-weight: 600;
     src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff");
-}
-
-@font-face {
+  }
+  @font-face {
     font-display: fallback;
     font-family: Roboto;
     font-weight: 700;
     src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff");
-}
+  }
 </style>
 <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+
 </head>
 
 <body>
 
 <header>
 <div class="logo">
-<img src="macsurgeonpic1.jpg" alt="Mac Surgeon Logo">
+<img src="macsurgeonpic1.jpg" alt="The Mac Surgeon Logo">
 </div>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="index.html#services">Services</a>
-<a href="index.html#aiagents">AI Agents</a>
-<a href="index.html#packages">Packages</a>
-<a href="index.html#newsletter">Newsletter</a>
-<a href="index.html#quote">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#remote">Remote Access</a>
+<a href="#aiagents">AI Agents</a>
+<a href="#packages">Packages</a>
+<a href="#newsletter">Newsletter</a>
+<a href="#quote">Free Quote</a>
 </nav>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+
+<div class="mobile-nav" id="mobileMenu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#remote">Remote Access</a>
+<a href="#aiagents">AI Agents</a>
+<a href="#packages">Packages</a>
+<a href="#newsletter">Newsletter</a>
+<a href="#quote">Free Quote</a>
+</div>
 </header>
 
-<section class="hero">
+<!-- HERO SECTION -->
+<section id="home" class="hero">
 <h1>Outsourced IT Support</h1>
-<p>The Mac Surgeon provides reliable Remote Help Desk services for individuals and companies that need additional IT support, overflow ticket handling, or Apple device expertise without hiring full-time staff (powered by Mac Surgeon AI Technology).</p>
+<p>
+The Mac Surgeon provides reliable Remote Help Desk services for individuals and companies that need additional
+IT support, overflow ticket handling, or Apple device expertise without hiring full-time staff (powered by Mac Surgeon AI Technology) 
+</p>
 <a class="button" href="#quote">Request Free Quote</a>
 </section>
 
-<section id="packages">
-<h1>IT Support Packages</h1>
-<p style="text-align:center; max-width:900px; margin:auto;">Flexible support packages designed for MSPs and growing companies that need additional IT capacity. Our services combine intelligent AI automation with experienced technicians to deliver reliable help desk coverage without the cost of hiring additional internal staff.</p>
+<!-- ABOUT SECTION -->
+<section id="about">
+<h2>About The Mac Surgeon</h2>
+<p>
+The Mac Surgeon is a remote IT support provider specializing in Apple environments including macOS,
+iOS, and Apple device management. We work remotely with individuals and businesses that need dependable help desk coverage,
+overflow ticket support, or Apple expertise to assist their internal IT teams or small business.
+</p>
+<p>
+Whether your company needs occasional support or consistent ticket coverage,
+our flexible service model allows organizations to scale their IT support
+without adding permanent staff.
+</p>
+</section>
 
+<!-- SERVICES SECTION -->
+<section id="services">
+<h2>Services</h2>
+<div class="services">
+<div class="service-card">
+<h3>Outsourced Help Desk</h3>
+<p>Remote IT support for employees experiencing technical issues with Apple
+devices, software, or workplace systems.</p>
+</div>
+<div class="service-card">
+<h3>Overflow Ticket Handling</h3>
+<p>When internal IT teams get overwhelmed, we step in to resolve help desk
+tickets and maintain productivity.</p>
+</div>
+<div class="service-card">
+<h3>Apple Device Support</h3>
+<p>Expert support for macOS, iOS, iPadOS, Apple hardware, and Apple business environments.</p>
+</div>
+<div class="service-card">
+<h3>Remote IT Consulting</h3>
+<p>Assistance with Apple deployments, troubleshooting, and improving your IT support workflow.</p>
+</div>
+</div>
+</section>
+
+<!-- REMOTE ACCESS SECTION -->
+<section id="remote">
+<h2>Remote Support Made Simple</h2>
+<div class="remote-steps">
+<div class="step">
+<h3>1. Receive Your Secure Link</h3>
+<p>When your support session begins, we send you a secure HelpWire connection link that allows us to start a remote support session.</p>
+</div>
+<div class="step">
+<h3>2. Follow the Guided Steps</h3>
+<p>HelpWire walks you through each permission required for screen sharing and remote assistance.</p>
+</div>
+<div class="step">
+<h3>3. Get Immediate Support</h3>
+<p>Once connected our technicians troubleshoot issues in real time while you watch.</p>
+</div>
+</div>
+</section>
+
+<!-- AI AGENTS SECTION -->
+<section id="aiagents">
+<h2>AI Agents</h2>
+<p style="max-width:900px;margin:auto;text-align:center;padding-bottom:30px;">
+Mac Surgeon provides AI-assisted help desk services for MSPs and businesses that need additional
+support capacity. We combine custom trained AI agents with real human technicians to handle
+after-hours tickets, overflow queues, and routine Tier 1 requests — while escalating complex
+issues to experienced engineers when needed.
+</p>
+<div class="services">
+<div class="service-card">
+<h3>After-Hours & Overflow IT Support</h3>
+<p>When your help desk gets overloaded or your team goes offline for the night, we step in.
+Companies simply forward overflow or after-hours tickets from their help desk platform
+(ServiceNow, Zendesk, Freshdesk, etc.) directly to our secure support queue. 
+From there our system immediately begins analyzing the request so your users receive fast responses
+even when your internal team is unavailable.</p>
+</div>
+<div class="service-card">
+<h3>Seamless Ticket Intake</h3>
+<p>Incoming support emails or forwarded help desk tickets are automatically ingested into our
+custom ticketing system. Our platform analyzes the issue, categorizes the request,
+and prepares it for our AI resolution engine. This allows organizations to extend
+their help desk capabilities without changing their existing workflow or tools.</p>
+</div>
+<div class="service-card">
+<h3>Custom AI Agents Trained on Your Environment</h3>
+<p>We build dedicated AI agents specifically trained for your organization. These agents learn
+from your internal knowledge base, past ticket history, documentation, procedures,
+and system environment. Over time they become smarter and more accurate — essentially
+creating a digital support technician that understands how your company operates.</p>
+</div>
+<div class="service-card">
+<h3>AI-Powered Tier 1 Resolution</h3>
+<p>Once trained, our AI agents begin handling common Tier 1 support requests automatically.
+They research internal documentation, analyze previous ticket resolutions, and perform
+secure external searches when necessary to generate accurate support responses.
+Many organizations see 50–80% of repetitive Tier 1 requests resolved faster using AI.</p>
+</div>
+<div class="service-card">
+<h3>Confidence Scoring & Smart Escalation</h3>
+<p>Every AI response is evaluated using our internal confidence scoring system. 
+If the AI determines it is less than 80% confident in the solution, the ticket
+is automatically escalated to a human Tier 2 technician. This ensures complex
+issues are handled by experienced engineers while routine problems are resolved quickly.</p>
+</div>
+<div class="service-card">
+<h3>Human Oversight & Tier 2 Engineering</h3>
+<p>Unlike fully automated systems, our technicians remain involved every step of the way.
+All AI responses pass through a review interface where our team can approve,
+modify, or take over the ticket entirely. When escalation is required, our
+Tier 2 engineers step in to resolve the issue directly — giving you the perfect
+balance of automation and human expertise.</p>
+</div>
+</div>
+</section>
+
+<!-- PACKAGES SECTION -->
+<section id="packages">
+<h2>IT Support Packages</h2>
 <div class="packages">
 
-<!-- PACKAGE 1 -->
 <div class="package-card">
 <h2>AI Help Desk Automation</h2>
 <p class="package-desc">
@@ -224,12 +472,12 @@ allowing them to generate accurate responses and resolve many common issues with
 <a class="button" href="https://calendly.com/macsurgeon-msp/30min" target="_blank">Schedule a Call Today</a>
 </div>
 
-<!-- PACKAGE 2 -->
 <div class="package-card">
 <h2>Dedicated Apple Specialists</h2>
 <p class="package-desc">
-Designed for organizations that rely on Apple devices and need experienced technicians available for real-time troubleshooting.
-Our Apple specialists provide professional screen-sharing sessions to diagnose and resolve macOS issues quickly.
+Designed for organizations that rely on Apple devices and need experienced technicians available
+for real-time troubleshooting. Our Apple specialists provide professional screen-sharing sessions
+to diagnose and resolve macOS issues quickly.
 </p>
 <ul class="features">
 <li>Dedicated macOS troubleshooting specialists</li>
@@ -244,11 +492,12 @@ Our Apple specialists provide professional screen-sharing sessions to diagnose a
 <a class="button" href="https://calendly.com/macsurgeon-msp/30min" target="_blank">Schedule a Call Today</a>
 </div>
 
-<!-- PACKAGE 3 -->
 <div class="package-card">
 <h2>After Hours & Overflow Coverage</h2>
 <p class="package-desc">
-Extend your help desk coverage beyond normal business hours. Our hybrid system of AI agents and human technicians manages ticket overflow and after-hours requests to ensure your users always receive timely support.
+Extend your help desk coverage beyond normal business hours. Our hybrid system of AI agents and
+human technicians manages ticket overflow and after-hours requests to ensure your users always
+receive timely support.
 </p>
 <ul class="features">
 <li>After-hours help desk coverage</li>
@@ -265,51 +514,26 @@ Extend your help desk coverage beyond normal business hours. Our hybrid system o
 </div>
 </section>
 
-<!-- Newsletter Section -->
-<section id="newsletter">
-<!-- Begin Brevo Form -->
-<div class="sib-form" style="text-align: center; background-color: #0f1010;">
-  <div id="sib-form-container" class="sib-form-container">
-    <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
-      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-        <span class="sib-form-message-panel__inner-text">
-          Your subscription could not be saved. Please try again.
-        </span>
-      </div>
-    </div>
-    <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
-      <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
-        <span class="sib-form-message-panel__inner-text">
-          Your subscription has been successful.
-        </span>
-      </div>
-    </div>
-    <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(242,222,222,1); max-width:540px; border-radius:3px; border-width:1px; border-color:#C0CCD9; border-style:solid;">
-      <form id="sib-form" method="POST" action="https://3e7948f5.sibforms.com/serve/MUIFAELMXDm0mHjHY3ZznqCxdOhO_en-z1HyyGvwCZp5dE9urkULJ5r3EaPhvSJoUNi2KxApP9CDEMDZrfNCOzyO74txUb0yn5DCPzJ4AbQ1XZfFQ_BhVhQqZsU2Cz6Kn13sMZkEWimgYS4qjK-Nbr70OQ_Jn_S5bHqIKRLK6Frn0QTWufNmT_mUe3mLlxDFUBzRQFWtgg77Vq9n9A==" data-type="subscription">
-        <div style="padding: 8px 0;">
-          <p style="font-size:32px; font-weight:700; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858;">The Mac Surgeon MSP</p>
-          <p style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858;">Subscribe to our newsletter and stay in the loop</p>
-        </div>
-        <div style="padding:8px 0;">
-          <input type="text" id="EMAIL" name="EMAIL" placeholder="EMAIL" required style="padding:12px;width:80%;border-radius:3px;border:1px solid #C0CCD9;">
-        </div>
-        <div style="padding:8px 0;">
-          <button type="submit" style="padding:12px 20px;background:#000;color:#fff;border:none;border-radius:3px;font-weight:700;cursor:pointer;">Subscribe</button>
-        </div>
-        <input type="hidden" name="locale" value="en">
-      </form>
-    </div>
-  </div>
-</div>
-<!-- End Brevo Form -->
+<!-- FREE QUOTE SECTION -->
+<section id="quote">
+<h2 style="text-align:center">Request a Free Quote</h2>
+<form action="https://formspree.io/f/xvzwgazz" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="text" name="company" placeholder="Company Name">
+<textarea name="message" placeholder="Tell us about the IT support you need. Please specify if you require remote IT support or overflow ticket handling. "></textarea>
+<input type="hidden" name="_subject" value="New Mac Surgeon MSP Lead">
+<button type="submit">Submit Request</button>
+</form>
 </section>
 
-<footer>
-Powered by The Mac Surgeon AI Technology
-<br><br>
-© 2026 The Mac Surgeon | Apple-Focused IT Support
-</footer>
-
-<script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
-</body>
-</html>
+<!-- NEWSLETTER SECTION -->
+<section id="newsletter" class="newsletter-section">
+<!-- START Brevo Form -->
+<div class="sib-form" style="text-align:center; background-color:#0f1010;">
+<div id="sib-form-container" class="sib-form-container">
+<form id="sib-form" method="POST" action="https://3e7948f5.sibforms.com/serve/MUIFAELMXDm0mHjHY3ZznqCxdOhO_en-z1HyyGvwCZp5dE9urkULJ5r3EaPhvSJoUNi2KxApP9CDEMDZrfNCOzyO74txUb0yn5DCPzJ4AbQ1XZfFQ_BhVhQqZsU2Cz6Kn13sMZkEWimgYS4qjK-Nbr70OQ_Jn_S5bHqIKRLK6Frn0QTWufNmT_mUe3mLlxDFUBzRQFWtgg77Vq9n9A==" data-type="subscription">
+<div style="padding:8px 0;"><div class="sib-form-block"><p style="font-size:32px;color:#fff;">The Mac Surgeon MSP</p></div></div>
+<div style="padding:8px 0;"><div class="sib-form-block"><p style="font-size:16px;color:#ccc;">Subscribe to our newsletter and stay in the loop</p></div></div>
+<div style="padding:8px 0;"><input class="input" type="text" id="EMAIL" name="EMAIL" placeholder="Enter your email address" required></div>
+<div style="padding
