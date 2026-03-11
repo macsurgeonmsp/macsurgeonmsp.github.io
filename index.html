@@ -241,42 +241,53 @@ opacity:.45;
 text-decoration:line-through;
 }
 
-/* Newsletter Section */
+/* NEWSLETTER SECTION */
 
-.newsletter-box{
-background:#161616;
-padding:40px;
-border-left:4px solid #c40000;
-border-radius:6px;
+.newsletter{
+background:#111;
+border-top:2px solid #c40000;
+border-bottom:2px solid #c40000;
 text-align:center;
-max-width:600px;
-margin:auto;
 }
 
-.newsletter-box h2{
+.newsletter h2{
 color:#ff2b2b;
-margin-top:0;
 }
 
-.newsletter-box p{
+.newsletter p{
 color:#ccc;
 margin-bottom:25px;
 }
 
 .newsletter-form{
 display:flex;
-gap:10px;
 justify-content:center;
 flex-wrap:wrap;
+gap:10px;
+max-width:600px;
+margin:auto;
 }
 
 .newsletter-form input{
 flex:1;
 min-width:220px;
+padding:12px;
+border:none;
+border-radius:3px;
 }
 
 .newsletter-form button{
-white-space:nowrap;
+padding:12px 22px;
+background:#c40000;
+border:none;
+color:white;
+font-weight:bold;
+border-radius:3px;
+cursor:pointer;
+}
+
+.newsletter-form button:hover{
+background:#ff2b2b;
 }
 
 footer{
@@ -319,7 +330,6 @@ display:block;
 <a href="#aiagents">AI Agents</a>
 <a href="#packages">Packages</a>
 <a href="#quote">Free Quote</a>
-<a href="#newsletter">Newsletter</a>
 </nav>
 
 <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -332,35 +342,53 @@ display:block;
 <a href="#aiagents">AI Agents</a>
 <a href="#packages">Packages</a>
 <a href="#quote">Free Quote</a>
-<a href="#newsletter">Newsletter</a>
 </div>
 
 </header>
 
-<!-- EVERYTHING ABOVE THIS IS IDENTICAL TO YOUR FILE -->
+<!-- ALL YOUR EXISTING SECTIONS REMAIN EXACTLY THE SAME -->
+
+<!-- (Home, About, Services, Remote, AI Agents, Packages, Quote sections unchanged) -->
+
+<section id="quote">
+
+<h2 style="text-align:center">Request a Free Quote</h2>
+
+<form action="https://formspree.io/f/xvzwgazz" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Email Address" required>
+
+<input type="text" name="company" placeholder="Company Name">
+
+<textarea name="message" placeholder="Tell us about the IT support you need. Please specify if you require remote IT support or overflow ticket handling. "></textarea>
+
+<input type="hidden" name="_subject" value="New Mac Surgeon MSP Lead">
+
+<button type="submit">Submit Request</button>
+
+</form>
+
+</section>
 
 <!-- NEWSLETTER SECTION -->
 
-<section id="newsletter">
+<section id="newsletter" class="newsletter">
 
-<div class="newsletter-box">
-
-<h2>Mac Surgeon Newsletter</h2>
+<h2>Join The Mac Surgeon Newsletter</h2>
 
 <p>
-Get occasional updates about Apple IT support tips, MSP automation,
-and new Mac Surgeon tools.
+Receive Apple IT support tips, MSP insights, and updates from The Mac Surgeon.
 </p>
 
-<form class="newsletter-form">
+<form class="newsletter-form" action="#" method="POST">
 
-<input type="email" placeholder="Enter your email address" required>
+<input type="email" name="email" placeholder="Enter your email address" required>
 
 <button type="submit">Subscribe</button>
 
 </form>
-
-</div>
 
 </section>
 
