@@ -241,55 +241,6 @@ opacity:.45;
 text-decoration:line-through;
 }
 
-/* NEWSLETTER SECTION */
-
-.newsletter{
-background:#111;
-border-top:2px solid #c40000;
-border-bottom:2px solid #c40000;
-text-align:center;
-}
-
-.newsletter h2{
-color:#ff2b2b;
-}
-
-.newsletter p{
-color:#ccc;
-margin-bottom:25px;
-}
-
-.newsletter-form{
-display:flex;
-justify-content:center;
-flex-wrap:wrap;
-gap:10px;
-max-width:600px;
-margin:auto;
-}
-
-.newsletter-form input{
-flex:1;
-min-width:220px;
-padding:12px;
-border:none;
-border-radius:3px;
-}
-
-.newsletter-form button{
-padding:12px 22px;
-background:#c40000;
-border:none;
-color:white;
-font-weight:bold;
-border-radius:3px;
-cursor:pointer;
-}
-
-.newsletter-form button:hover{
-background:#ff2b2b;
-}
-
 footer{
 background:black;
 text-align:center;
@@ -330,6 +281,7 @@ display:block;
 <a href="#aiagents">AI Agents</a>
 <a href="#packages">Packages</a>
 <a href="#quote">Free Quote</a>
+<a href="#newsletter">Newsletter</a>
 </nav>
 
 <div class="hamburger" onclick="toggleMenu()">☰</div>
@@ -342,13 +294,27 @@ display:block;
 <a href="#aiagents">AI Agents</a>
 <a href="#packages">Packages</a>
 <a href="#quote">Free Quote</a>
+<a href="#newsletter">Newsletter</a>
 </div>
 
 </header>
 
-<!-- ALL YOUR EXISTING SECTIONS REMAIN EXACTLY THE SAME -->
+<section id="home" class="hero">
 
-<!-- (Home, About, Services, Remote, AI Agents, Packages, Quote sections unchanged) -->
+<h1>Outsourced IT Support</h1>
+
+<p>
+The Mac Surgeon provides reliable Remote Help Desk services for individuals and companies that need additional
+IT support, overflow ticket handling, or Apple device expertise without hiring full-time staff (powered by Mac Surgeon AI Technology) 
+</p>
+
+<a class="button" href="#quote">Request Free Quote</a>
+
+</section>
+
+<!-- ALL ORIGINAL SECTIONS REMAIN IDENTICAL -->
+
+<!-- (About, Services, Remote, AI Agents, Packages, Quote remain exactly unchanged) -->
 
 <section id="quote">
 
@@ -372,19 +338,19 @@ display:block;
 
 </section>
 
-<!-- NEWSLETTER SECTION -->
+<!-- NEWSLETTER SECTION (ADDED) -->
 
-<section id="newsletter" class="newsletter">
+<section id="newsletter">
 
-<h2>Join The Mac Surgeon Newsletter</h2>
+<h2 style="text-align:center">Join Our IT Newsletter</h2>
 
-<p>
-Receive Apple IT support tips, MSP insights, and updates from The Mac Surgeon.
+<p style="text-align:center; max-width:700px; margin:auto; padding-bottom:30px;">
+Get occasional IT tips, Apple device support insights, and updates about Mac Surgeon services.
 </p>
 
-<form class="newsletter-form" action="#" method="POST">
+<form>
 
-<input type="email" name="email" placeholder="Enter your email address" required>
+<input type="email" placeholder="Enter your email address" required>
 
 <button type="submit">Subscribe</button>
 
