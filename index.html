@@ -678,7 +678,11 @@ menu.style.display = "flex";
 }
 /* Back To Top Logic */
 
-var backToTop = document.getElementById("backToTop");
+var backToTop;
+
+window.onload = function(){
+backToTop = document.getElementById("backToTop");
+}
 
 window.onscroll = function(){
 if(document.body.scrollTop > 300 || document.documentElement.scrollTop > 300){
